@@ -1,0 +1,13 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /messages/{messageId} {
+      allow read: if true;
+      // Allow message creation without authentication
+      allow create: if 
+        request.resource.data.keys().hasAll(['id', 'content', 'form', 'createdAt']) &&
+        request.resource.data.form.keys().hasAll(['senderName', 'recipientName', 'relationship']);
+      allow update, delete: if false;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+/* Import Christmas fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Berkshire+Swash&display=swap');
+
+:root {
+  --christmas-red: #D42426;
+  --christmas-green: #165B33;
+  --christmas-gold: #FFD700;
+  --christmas-white: #F4F4F4;
+  --christmas-silver: #E8E8E8;
+  --christmas-background: linear-gradient(135deg, #1a472a 0%, #2C5530 100%);
+  --card-background: rgba(255, 255, 255, 0.15);
+}
+
+body {
+  margin: 0;
+  font-family: 'Berkshire Swash', cursive;
+  background: var(--christmas-background);
+  min-height: 100vh;
+  color: var(--christmas-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Mountains of Christmas', cursive;
+  color: var(--christmas-gold);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background: var(--card-background);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 2px solid var(--christmas-gold);
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+button {
+  background: linear-gradient(45deg, var(--christmas-red) 0%, #FF4B4B 100%);
+  color: var(--christmas-white);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+input, select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--christmas-silver);
+  color: var(--christmas-white);
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--christmas-gold);
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+}
+
+.message-display {
+  background: rgba(22, 91, 51, 0.9);
+  border: 3px solid var(--christmas-gold);
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.signature {
+  color: var(--christmas-gold);
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  button {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+  }
+}
